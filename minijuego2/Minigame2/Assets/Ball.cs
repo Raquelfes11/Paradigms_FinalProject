@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Ball : MonoBehaviour
     public Rigidbody2D hook;
     public float maxDragDistance = 2f;
 
+    public GameObject nextBall;
 
     // We want to set it to kinematic in order to move it
     public Rigidbody2D rb;
@@ -52,6 +54,19 @@ public class Ball : MonoBehaviour
         GetComponent<SpringJoint2D>().enabled = false; //We want the ball to separate from the hook
 
         this.enabled = false; //We can only push the ball once
+
+        yield return new WaitForSeconds(2f);
+
+        if (nextBall!=null)
+        {
+            nextBall.SetActive(true);
+        }
+        else
+        {
+            Enemy.EnemiesAlive = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
     }
 
 
