@@ -5,6 +5,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
 
+    public float releaseTime = .15f;
+
     // We want to set it to kinematic in order to move it
     public Rigidbody2D rb;
 
@@ -16,7 +18,7 @@ public class Ball : MonoBehaviour
     {
         if (isPressed)
         {
-
+            rb.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 
@@ -30,6 +32,15 @@ public class Ball : MonoBehaviour
     {
         isPressed = false;
         rb.isKinematic = false;
+
+        StartCoroutine(Release());
+    }
+
+    IEnumerator Release() //Coroutine
+    {
+        yield return new WaitForSeconds(releaseTime);
+
+        GetComponent<SpringJoint2D>().enabled = false; //We want the ball to separate from the hook
     }
 
 }
