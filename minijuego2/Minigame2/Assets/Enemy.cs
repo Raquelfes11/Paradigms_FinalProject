@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject deathEffect;
     public float health = 4f;
+
+    public static int EnemiesAlive = 0;
+
+    void Start()
+    {
+        EnemiesAlive++;
+    }
 
     void OnCollisionEnter2D(Collision2D colInfo)
     {
@@ -16,6 +24,17 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        EnemiesAlive--;
+
+        if (EnemiesAlive<=0)
+        {
+            Debug.Log("WELL DONE, NOW YOU CAN SEE THE NEXT CLUE IN ORDER TO SCAPE THE ROOM\nSecret Word:\n*********Butterfly*********");
+
+
+
+        }
+
         Destroy(gameObject);
     }
     
