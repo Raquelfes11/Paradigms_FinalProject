@@ -7,6 +7,11 @@ public class Ball : MonoBehaviour
 
     public float releaseTime = .15f;
 
+    // Referece to the hook
+    public Rigidbody2D hook;
+    public float maxDragDistance = 2f;
+
+
     // We want to set it to kinematic in order to move it
     public Rigidbody2D rb;
 
@@ -18,7 +23,11 @@ public class Ball : MonoBehaviour
     {
         if (isPressed)
         {
-            rb.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (Vector3.Distance(mousePos, hook.position) > maxDragDistance)
+                rb.position = hook.position + (mousePos - hook.position).normalized * maxDragDistance;
+            else
+                rb.position = mousePos;
         }
     }
 
@@ -41,6 +50,9 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(releaseTime);
 
         GetComponent<SpringJoint2D>().enabled = false; //We want the ball to separate from the hook
+
+        this.enabled = false; //We can only push the ball once
     }
+
 
 }
