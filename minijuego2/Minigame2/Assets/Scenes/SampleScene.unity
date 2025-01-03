@@ -224,7 +224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 933294574695291887, guid: b21b737b354ed4e118e5f0e1c5f2d66f, type: 3}
       propertyPath: m_Name
-      value: Wood_Normal (2)
+      value: Normal (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4572384672750957378, guid: b21b737b354ed4e118e5f0e1c5f2d66f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743301817277220684, guid: b137709a0d81c44e08f9a756d998f352, type: 3}
       propertyPath: m_Name
-      value: Enemy (1)
+      value: Bird (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -378,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743301817277220684, guid: b137709a0d81c44e08f9a756d998f352, type: 3}
       propertyPath: m_Name
-      value: Enemy (2)
+      value: Bird (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -435,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894213197540660105, guid: 5b01314a29954458fa68028d44fb11ce, type: 3}
       propertyPath: m_Name
-      value: Wood_Tall (1)
+      value: Tall (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 1316089449}
   - component: {fileID: 1316089448}
   m_Layer: 0
-  m_Name: Wood_Tall
+  m_Name: Tall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,7 +829,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 933294574695291887, guid: b21b737b354ed4e118e5f0e1c5f2d66f, type: 3}
       propertyPath: m_Name
-      value: Wood_Normal (3)
+      value: Normal (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4572384672750957378, guid: b21b737b354ed4e118e5f0e1c5f2d66f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 1975949629}
   - component: {fileID: 1975949628}
   m_Layer: 0
-  m_Name: Wood_Normal
+  m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743301817277220684, guid: b137709a0d81c44e08f9a756d998f352, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Bird
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
