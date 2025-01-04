@@ -8,6 +8,7 @@ TagManager:
   - purple
   - blue
   - yellow
+  - change
   layers:
   - Default
   - TransparentFX
