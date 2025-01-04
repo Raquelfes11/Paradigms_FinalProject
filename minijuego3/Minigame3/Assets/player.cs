@@ -41,9 +41,15 @@ public class player : MonoBehaviour
             return;
         }
 
+        if (collider.tag == "finish")
+        {
+            Debug.Log("YOU HAVE COMPLETED THE GAME\nTHE SECRET WORD IS:\n**********Octopus**********");
+            Destroy(collider.gameObject);
+        }
+
         if (collider.tag != currentColor)
         {
-            Debug.Log("Game Over");
+            //Debug.Log("Game Over");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

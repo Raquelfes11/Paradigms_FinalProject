@@ -9,6 +9,7 @@ TagManager:
   - blue
   - yellow
   - change
+  - finish
   layers:
   - Default
   - TransparentFX
